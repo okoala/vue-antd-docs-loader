@@ -1,0 +1,33 @@
+{
+  "name": "vue-antd-docs-loader",
+  "version": "0.1.0",
+  "description": "vue-antd-docs-loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okoala/vue-antd-docs-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "docs",
+    "html"
+  ],
+  "author": {
+    "name": "KoalaHuang",
+    "email": "dapixp@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okoala/vue-antd-docs-loader/issues"
+  },
+  "homepage": "https://github.com/okoala/vue-antd-docs-loader",
+  "dependencies": {
+    "marked": "^0.3.2",
+    "loader-utils": "^0.2.7",
+    "object-assign": "^2.0.0"
+  }
+}
