@@ -16,6 +16,10 @@ var options = {
   smartypants: false
 };
 
+var wrapMarkdown = function (html) {
+  return '<div class="markdown">' + html + '</div>';
+}
+
 module.exports = function (markdown) {
   // merge params and default config
   var query = loaderUtils.parseQuery(this.query);
@@ -26,5 +30,8 @@ module.exports = function (markdown) {
 
   marked.setOptions(options);
 
-  return marked(markdown);
+  var html = marked(markdown);
+  html = wrapMarkdown(html);
+
+  return html;
 };
