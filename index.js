@@ -41,9 +41,10 @@ var wrapDemoCode = function (html) {
     })
     .replace(/<example title=\"([^\"]*)\"[^>]*>(.*?)<\/example>/gim, function(s, title, code) {
       // 删除代码中四个空格，主要是代码格式问题
-      code = code.replace(/\s{4}/gi, '')
 
       var esCode = Prism.highlight(code, Prism.languages.markup, 'markup')
+      esCode = esCode.replace(/\s{4}/gi, '').replace(/\s+$/gi, '')
+
       var str = `<div class="code-box code-boxes-col">
           <h3>${title}</h3>
           <div class="code-boxes-col-2-1 code-box-demo">${code}</div>

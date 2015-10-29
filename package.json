@@ -1,6 +1,6 @@
 {
   "name": "vue-antd-docs-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "vue-antd-docs-loader for webpack",
   "main": "index.js",
   "scripts": {
