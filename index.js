@@ -43,7 +43,7 @@ var wrapDemoCode = function (html) {
       // 删除代码中四个空格，主要是代码格式问题
 
       var esCode = Prism.highlight(code, Prism.languages.markup, 'markup')
-      esCode = esCode.replace(/\s{4}/gi, '').replace(/\s+$/gi, '')
+      esCode = esCode.replace(/\\n\s{4}/gi, '\\n').replace(/\s+$/gi, '')
 
       var str = `<div class="code-box code-boxes-col">
           <h3>${title}</h3>
