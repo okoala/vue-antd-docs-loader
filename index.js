@@ -3,7 +3,7 @@
 var marked = require("marked")
 var loaderUtils = require("loader-utils")
 var assign = require("object-assign")
-var prism = require('jstransformer')(require('jstransformer-prismjs'))
+var Prism = require('prismjs')
 
 // default option
 var options = {
@@ -43,11 +43,11 @@ var wrapDemoCode = function (html) {
       // 删除代码中四个空格，主要是代码格式问题
       code = code.replace(/\s{4}/gi, '')
 
-      var esCode = prism.render(code, { language: 'markup' }).body
+      var esCode = Prism.highlight(code, Prism.languages.markup, 'markup')
       var str = `<div class="code-box code-boxes-col">
           <h3>${title}</h3>
           <div class="code-boxes-col-2-1 code-box-demo">${code}</div>
-          <div class="code-boxes-col-2-1 code-box-code">${esCode}</div>
+          <div class="code-boxes-col-2-1 code-box-code"><pre>${esCode}</pre></div>
       </div>`
 
       return str
