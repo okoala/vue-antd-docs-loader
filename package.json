@@ -1,6 +1,6 @@
 {
   "name": "vue-antd-docs-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vue-antd-docs-loader for webpack",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,8 @@
   "dependencies": {
     "marked": "^0.3.2",
     "loader-utils": "^0.2.7",
-    "object-assign": "^2.0.0"
+    "object-assign": "^2.0.0",
+    "jstransformer": "0.0.3",
+    "jstransformer-prismjs": "0.0.1"
   }
 }
